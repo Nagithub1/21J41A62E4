@@ -28,7 +28,7 @@ async function fetchNumber(id) {
   }
 
   try {
-    const response = await axios.get(url, { timeout: 1000 }); // Fetch data with a 1000ms timeout
+    const response = await axios.get(url, { timeout: 500 }); // Fetch data with a 1000ms timeout
 
     // Parse response based on ID
     if (id === 'e' || id === 'r') {
