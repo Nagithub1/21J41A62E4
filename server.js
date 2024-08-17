@@ -11,13 +11,13 @@ async function fetchNumber(id) {
   let url = '';
   switch (id) {
     case 'p':
-      url = 'https://api.prime-numbers.io/prime'; // URL for prime numbers
+      url = 'https://onlinetools.com/random/generate-random-primes?range-start=2&range-end=1000000&count=10&separator=%255Cn'; // URL for prime numbers
       break;
     case 'f':
-      url = 'https://fibonacci-api.com/sequence/5'; // URL for Fibonacci numbers
+      url = 'https://onlinetools.com/math/generate-fibonacci-numbers?start=0&count=10'; // URL for Fibonacci numbers
       break;
     case 'e':
-      url = 'https://www.random.org/integers/?num=5&min=1&max=10000&col=1&base=10&format=plain&rnd=new'; // URL for even numbers
+      url = 'https://www.random.org/integers/?num=5&min=1&max=10000&col=1&base=10&format=plain'; // URL for even numbers
       break;
     case 'r':
       url = 'https://www.random.org/integers/?num=5&min=1&max=10000&col=1&base=10&format=plain'; // URL for random numbers
@@ -28,7 +28,7 @@ async function fetchNumber(id) {
   }
 
   try {
-    const response = await axios.get(url, { timeout: 500 }); // Fetch data with a 1000ms timeout
+    const response = await axios.get(url, { timeout: 1000 }); // Fetch data with a 1000ms timeout
 
     // Parse response based on ID
     if (id === 'e' || id === 'r') {
